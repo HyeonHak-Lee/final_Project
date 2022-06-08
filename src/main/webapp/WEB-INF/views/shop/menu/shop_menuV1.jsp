@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--[if IE 10]><meta http-equiv="X-UA-Compatible" content="IE=8" /><![endif]-->
-    <title>사장님 사이트 메뉴</title>
+    <title>Cafe24-Echosting Admin</title>
     <!-- Google Tag Manager -->
     <script async="" src="https://a.clarity.ms/s/0.6.34/clarity.js"></script>
     <script type="text/javascript" async="" src="https://ydh312.cafe24.com/ind-script/moment.php?convert=F"></script>

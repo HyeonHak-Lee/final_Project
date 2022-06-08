@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--[if IE 10]><meta http-equiv="X-UA-Compatible" content="IE=8" /><![endif]-->
-    <title>저기요 사장님 메뉴</title>
+    <title>Cafe24-Echosting Admin</title>
     <!-- Google Tag Manager -->
     <script async="" src="https://a.clarity.ms/s/0.6.34/clarity.js"></script>
     <script type="text/javascript" async="" src="https://ydh312.cafe24.com/ind-script/moment.php?convert=F"></script>
@@ -877,27 +877,25 @@
             <div class="header">
                 <div class="head">
                     <h1 class="logo">
-                        <a href="/shop/home">
-                            <img src="/resources/images/img-nav-owners-v2.png" alt="cafe24">
+                        <a href="/disp/admin/shop1/mode/dashboard">
+                            <img src="//img.echosting.cafe24.com/ec/mode/easiest/common/h1_logo.png" alt="cafe24">
                         </a>
                     </h1>
 
                 </div>
-				<ul class="ext">
-		            <a href="/shop/order/home" target="_blank"><img src="/resources/images/orderCheck.png">주문확인 </a>&nbsp;&nbsp;&nbsp;
-		            <a href="/shop/order/home" target="bizcenter" onclick="ga_event_tracker('GNB_BIZ', this, event)"><img src="/resources/images/poomjeol.png">메뉴관리</a>&nbsp;&nbsp;&nbsp;
-		            <a href="/shop/business/home" target="mall" onclick="ga_event_tracker('GNB_MALL', this, event)"><img src="/resources/images/business.png">영업일 관리 </a>&nbsp;&nbsp;&nbsp;
-		    	    <a href="/shop/coupon/home" target="_blank"><img src="/resources/images/coupon.png">쿠폰관리</a>
-		       	</ul>
+
                 <ul class="util">
                     <!-- [TOP MENU] Language -->
 
                     <!-- [TOP MENU] Help Center -->
                     <li class="guide">
+                        <button type="button" class="btnMore eClick ec-mode-gnb-menu">더보기</button>
                         <div class="dropLayer">
                             <div class="divide">
                                 <strong class="title">Help Center</strong>
                                 <ul class="link">
+                                    <!-- 고객센터 -->
+                                    <li class="newWindow"><a href="//ecsupport.cafe24.com/" target="_blank" title="새창 열림">고객센터</a></li>
                                     <!-- 1:1 문의 -->
                                     <li class="newWindow"><a href="/admin/php/shop1/AutoLogin/request.php?uri=https%3A%2F%2Fechosting.cafe24.com%2FCs%2F%3Furl%3DCsboard%26userid%3Dydh312%26loginid%3Dydh312" target="_blank">1:1 문의</a></li>
                                 </ul>
