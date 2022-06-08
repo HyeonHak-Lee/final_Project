@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="copyright" content="Copyright(c) Simplex Internet Inc.All Rights Reserved.">
-    <title>Cafe24-Echosting Admin</title>
+    <title>사장님 사이트 쿠폰</title>
     <!-- Google Tag Manager -->
     <script async="" src="https://a.clarity.ms/s/0.6.34/clarity.js"></script>
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
@@ -859,6 +859,7 @@
     </script><!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBS7Z7L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    
     <div id="wrap" class="">
         <div id="header">
 
