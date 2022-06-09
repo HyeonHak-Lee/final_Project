@@ -1144,13 +1144,13 @@
                     </div>
                 </div>
 
-                <form action="/disp/admin/shop1/product/productmanage" method="GET" name="eProductSearchForm" id="eProductSearchForm">
+                <form action="/shop/menu/list" method="POST" name="eProductSearchForm" id="eProductSearchForm">
 					<!-- 검색조건 -->
 					<%@include file="menu_search.jsp" %>
+				</form>
 					<!-- 검색결과 -->
 					<%@include file="menu_result.jsp" %>
                    
-                </form>
             </div>
             <!-- //content -->
 

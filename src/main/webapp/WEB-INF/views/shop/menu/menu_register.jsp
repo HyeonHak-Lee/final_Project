@@ -29,7 +29,7 @@
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th scope="row">상품명 <strong class="icoRequired">필수</strong></th>
+                        <th scope="row">메뉴명 <strong class="icoRequired">필수</strong></th>
                         <td colspan="2">
                             <div class="overlapTip ec-product-auto-translate">
                                 <span class="mFormRequired">
@@ -189,15 +189,12 @@
                             <span class="eImageLinkDataM"></span>
                         </td>
                     </tr>
-                    <tr>
-                    	<td colspan="2" align="right">
-                    		<input type="submit" value="등록하기">
-                    	</td>
-                    	<td colspan="1" align="right">
-                    	</td>
-                    </tr>
                 </tbody>
             </table>
+        </div>
+        <div>
+        	<input type="submit" value="등록하기">
+        	<input type="reset" value="초기화">
         </div>
 
         <!-- 참고 : 이미지 사이즈 변경 레이어 -->

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!-- 메뉴 서치하는 창 -->
+
+
 <div class="optionArea " id="QA_deposit1">
 
     <div class="mCtrl typeHeader " style="display: none;">
@@ -31,14 +32,14 @@
                     <td colspan="2">
                         <div id="mainSearch">
                             <div>
-                                <select class="fSelect" name="title" style="width:163px;">
+                                <select class="fSelect" name="kinds" style="width:163px;">
                                     <option value="choice">검색항목선택</option>
                                     <option value="menu_name">메뉴이름</option>
                                     <option value="menu_price">판매가격</option>
 
                                 </select>
                                 <!-- 여기 추천여부 결정해야함  -->
-                                <input type="text" class="fText sBaseSearchBox" name="menu_name" id="sBaseSearchBox" style="width:400px;">
+                                <input type="text" class="fText sBaseSearchBox" name="searchData" id="sBaseSearchBox" style="width:400px;">
                                 <!-- js파일 이용하기 -->
                                 <a href="#none" class="btnIcon icoPlus"><span>추가</span></a>
                             </div>
@@ -100,5 +101,11 @@
                 <!-- 여기에 원산지 별로 할지 말지 설정 -->
             </tbody>
         </table>
+        
+        <div class="mButton gCenter">
+        	<input type="submit" value="검색" >
+		    <a href="/shop/menu/list" class="btnSearch" id="btnSearch"><span>검색</span></a>
+		    <a href="#none" class="btnSearch reset" id="eSearchFormInit"><span>초기화</span></a>
+		</div>
     </div>
 </div>
