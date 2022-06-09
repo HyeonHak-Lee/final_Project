@@ -6,14 +6,15 @@ public class MenuDto {
 	private String menu_coder;
 	private String shop_id;
 	private String menu_name;
-	private Integer price;
-	private String menu_catergory;
+	private Integer menu_price;
+	private String category_num;
 	private Integer sale_rate;
 	private String saling_check;
 	private String recommendation;
 	private String menu_explanation;
 	private String menu_filename;
 	private String origin_code;
+	
 	public String getMenu_coder() {
 		return menu_coder;
 	}
@@ -32,17 +33,19 @@ public class MenuDto {
 	public void setMenu_name(String menu_name) {
 		this.menu_name = menu_name;
 	}
-	public Integer getPrice() {
-		return price;
+	
+	public Integer getMenu_price() {
+		return menu_price;
 	}
-	public void setPrice(Integer price) {
-		this.price = price;
+	public void setMenu_price(Integer menu_price) {
+		this.menu_price = menu_price;
 	}
-	public String getMenu_catergory() {
-		return menu_catergory;
+	
+	public String getCategory_num() {
+		return category_num;
 	}
-	public void setMenu_catergory(String menu_catergory) {
-		this.menu_catergory = menu_catergory;
+	public void setCategory_num(String category_num) {
+		this.category_num = category_num;
 	}
 	public Integer getSale_rate() {
 		return sale_rate;
@@ -82,31 +85,10 @@ public class MenuDto {
 	}
 	@Override
 	public String toString() {
-		return "MenuDto [menu_coder=" + menu_coder + ", shop_id=" + shop_id + ", menu_name=" + menu_name + ", price="
-				+ price + ", menu_catergory=" + menu_catergory + ", sale_rate=" + sale_rate + ", saling_check="
-				+ saling_check + ", recommendation=" + recommendation + ", menu_explanation=" + menu_explanation
-				+ ", menu_filename=" + menu_filename + ", origin_code=" + origin_code + "]";
-	}
-	@Override
-	public int hashCode() {
-		return Objects.hash(menu_catergory, menu_coder, menu_explanation, menu_filename, menu_name, origin_code, price,
-				recommendation, sale_rate, saling_check, shop_id);
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		MenuDto other = (MenuDto) obj;
-		return Objects.equals(menu_catergory, other.menu_catergory) && Objects.equals(menu_coder, other.menu_coder)
-				&& Objects.equals(menu_explanation, other.menu_explanation)
-				&& Objects.equals(menu_filename, other.menu_filename) && Objects.equals(menu_name, other.menu_name)
-				&& Objects.equals(origin_code, other.origin_code) && Objects.equals(price, other.price)
-				&& Objects.equals(recommendation, other.recommendation) && Objects.equals(sale_rate, other.sale_rate)
-				&& Objects.equals(saling_check, other.saling_check) && Objects.equals(shop_id, other.shop_id);
+		return "MenuDto [menu_coder=" + menu_coder + ", shop_id=" + shop_id + ", menu_name=" + menu_name
+				+ ", menu_price=" + menu_price + ", category_num=" + category_num + ", sale_rate=" + sale_rate
+				+ ", saling_check=" + saling_check + ", recommendation=" + recommendation + ", menu_explanation="
+				+ menu_explanation + ", menu_filename=" + menu_filename + ", origin_code=" + origin_code + "]";
 	}
 	
 	
