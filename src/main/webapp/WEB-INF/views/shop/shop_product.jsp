@@ -14,7 +14,7 @@
     <script src="https://js-agent.newrelic.com/nr-spa-1216.min.js"></script>
     <script async="" src="//www.google-analytics.com/analytics.js"></script>
     
-    <title>저기요 사장님 회원가입</title>
+    <title>저기요 소개</title>
     <!-- 다음주소를 위한 코드 -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	
@@ -174,244 +174,44 @@
 	  </ul>
 	</div>
 	<!-- 칸 여러개 있는부분 합치는거 자바스크립트로 구현해야함 -->
-    <div class="own-content j4">
+    <div class="own-content j2">
 
         <div class="tit-area">
-            <h2>사장님 회원 가입</h2>
-            <p>운영중인 가게를 저기요에 신청하세요. 온라인 입점신청 중 어려움이 있으시면 고객센터(1661-5270)로 연락주세요</p>
+            <h2>입점상품 소개</h2>
+            <p>합리적인 비용으로 가게를 홍보할 수 있어요</p>
         </div>
-		<!-- 상점등록 폼태그 시작 -->
-        <!-- form method="POST" name="join-form" enctype="multipart/form-data" novalidate="novalidate"-->
-        <form action="/shop/register" method="post" id="join-form" name="join-form">
-        <div class="join-form">
-        	
-            <div class="tbl-caption frst">가입 정보 <span class="stxt"><em>*</em>&nbsp;필수 입력 정보</span></div>
-            <table class="table-style1">
-                <colgroup>
-                    <col style="width: 150px">
-                    <col>
-                </colgroup>
-            
-                <tbody>
-               
-                <tr>
-                    <th>ID <em>*</em></th>
-                    <td>
-                        <input type="text" class="w-l" name="shop_id" >
-                        <button type="button" id="btn-idCheck" class="btn-sm" >아이디확인</button>
-                        <span class="alert" name="id_vericode_message" style="display: none;"></span>
-                    
-                    </td>
-                </tr>
-                
-                <tr name="confirm_vericode_row">
-                    <th>비밀번호<em>*</em></th>
-                    <td>
-                        <input type="password" class="w-l" name="shop_pw">
-                        <span class="alert" name="pw_vericode_message" style="display: none;"></span>
-                    </td>
-                </tr>
-                
-                
-                <tr name="confirm_vericode_row">
-                    <th>비밀번호 확인<em>*</em></th>
-                    <td>
-                        <input type="password" class="w-l" name="shop_pwCheck">
-                        <button type="button" id="btn-pwCheck" class="btn-sm">비밀번호확인</button>
-                        <span class="alert" name="pw_vericode_message" style="display: none;"></span>
-                    </td>
-                </tr>
-            </tbody></table>
-        
-            <div class="tbl-caption frst">사업자 정보 <span class="stxt"><em>*</em>&nbsp;필수 입력 정보</span></div>
-            <table class="table-style1">
-                <colgroup>
-                    <col style="width: 150px">
-                    <col>
-                </colgroup>
-                <tbody><tr>
-                    <th>사업자 번호 <em>*</em></th>
-                    <td>
-                    <!-- 사업자 번호입력란
-                    	company_number = cn1+cn2+cn3 
-                     -->
-                        <input type="hidden" name="owner_register_number" id="company_number">
-                        <input type="text" class="w-s" name="cn1" numberonly="true" maxlength="3"> <span class="bar">-</span>
-                        <input type="text" class="w-s" name="cn2" numberonly="true" maxlength="2"> <span class="bar">-</span>
-                        <input type="text" class="w-s" name="cn3" numberonly="true" maxlength="5">
-                        <button type="button"  id="btn-ornCheck" name="check_duplicate_button" class="btn-sm" data-confirm="0">조회</button>
-                        <!-- 조회 눌럿을경우 나오는 메세지 출력란 -->
-                        <span class="alert" name="orn-message" style="display: none;"></span>
-                    </td>
-                </tr>
-               
-                <tr>
-                    <th>사업주명 <em>*</em></th>
-                    <td>
-                        <input type="text" class="w-l" name="owner_name" maxlength="10">
-                        <span class="alert" name="on-message" style="display: none;"></span>
-                    </td>
-                </tr>
-                <tr name="email_row">
-                    <th>이메일 입력 <em>*</em></th>
-                    <td>
-                        <input type="text" class="w-l" name="shop_email" numberonly="true">
-                        <span class="alert" name="email_message" style="display: none;"></span>
-                    </td>
-                </tr>
-                <tr>
-                <!-- owner_phone = mtel1+ mtel2+ mtel3  -->
-                    <th>사업자 휴대폰 번호 <em>*</em></th>
-                    <td>
-                        <input type="hidden" name="owner_phone">
-                        <div class="select-style">
-                            <select name="mtel1" class="w-s">
-                                <option value="010">010</option>
-                                <option value="011">011</option>
-                                <option value="016">016</option>
-                                <option value="017">017</option>
-                                <option value="018">018</option>
-                                <option value="019">019</option>
-                                <option value="0130">0130</option>
-                             </select>
-                         </div>
-                          <span class="bar">-</span>
-                        <input type="text" class="w-s" name="mtel2" numberonly="true"> <span class="bar">-</span>
-                        <input type="text" class="w-s" name="mtel3" numberonly="true">
-                        <button type="button" id="btn-sendsms" class="btn-sm" name="send_veri_code_button">인증번호 전송</button>
-                        <p class="info-txt">인증번호를 받지 못했다면 [인증번호 재전송] 버튼을 클릭해 주세요.</p>
-                        <span class="alert" name="vericode_message" style="display: none;"></span>
-                    </td>
-                </tr>
-                <!-- 여기는 나중에 추가하기 -->
-                <tr name="confirm_vericode_row">
-                    <th>인증번호 입력 <em>*</em></th>
-                    <td>
-                        <input type="text" class="w-l" name="veri_code" numberonly="true">
-                        <button type="button" id="btn-smsConfirm" class="btn-sm" name="comfirm_veri_code_button" data-confirm="0">확인</button>
-                        <span class="alert" name="confirm_vericode_message" style="display: none;"></span>
-                    </td>
-                </tr>
-                
-            </tbody></table>
 
-            <div class="tbl-caption">가게 정보</div>
-            <table class="table-style1">
-                <colgroup>
-                    <col style="width: 150px">
-                    <col>
-                </colgroup>
-                <tbody><tr>
-                    <th>가게 이름 <em>*</em></th>
-                    <td>
-                        <input type="text" class="w-l" maxlength="20" name="shop_name">
-                    </td>
-                </tr>
-                <tr>
-                    <th>가게 전화번호</th>
-                    <td>
-                    <!-- shop_tel = tel1+tel2+tel3  -->
-                        <input type="hidden" name="shop_tel">
-                        <div class="select-style">
-                        <select name="tel1" id="tel1" class="w-s">
-                            <option value="02">02</option>
-                            <option value="031">031</option>
-                            <option value="032">032</option>
-                            <option value="033">033</option>
-                            <option value="041">041</option>
-                            <option value="042">042</option>
-                            <option value="043">043</option>
-                            <option value="044">044</option>
-                            <option value="051">051</option>
-                            <option value="052">052</option>
-                            <option value="053">053</option>
-                            <option value="054">054</option>
-                            <option value="055">055</option>
-                            <option value="061">061</option>
-                            <option value="062">062</option>
-                            <option value="063">063</option>
-                            <option value="064">064</option>
-                            <option value="010">010</option>
-                            <option value="011">011</option>
-                            <option value="016">016</option>
-                            <option value="017">017</option>
-                            <option value="018">018</option>
-                            <option value="019">019</option>
-                            <option value="0130">0130</option>
-                            <option value="070">070</option>
-                            <option value="080">080</option>
-                            <option value="0507">0507</option>
-                            <option value="0506">0506</option>
-                            <option value="0505">0505</option>
-                            <option value="0504">0504</option>
-                            <option value="0503">0503</option>
-                            <option value="0502">0502</option>
-                            <option value="0303">0303</option>
-                         </select>
-                         </div> <span class="bar">-</span>
-                        <input type="text" class="w-s" name="tel2" numberonly="true"> <span class="bar">-</span>
-                        <input type="text" class="w-s" name="tel3" numberonly="true">
-                    </td>
-                </tr>
-                <tr>
-                	<!-- 이걸 따로 저장할지 고민하기 -->
-                    <th>가게 주소 <em>*</em></th>
-                    <td name="selected_address">
-                        <input type="hidden" id="shop_zipCode" name="shop_zipcode">
-                        <input type="hidden" id="shop_street" name="shop_street">
-                        <input type="text" class="w-xl" placeholder="동,면,읍" id="shop_address" name="shop_address" readonly="readonly">
-                        <!-- <button type="button" class="btn-sm" data-toggle="modal" data-target="#myModal">주소검색</button-->
-                        <button type="button" class="btn-sm" onclick="daumPost()">주소검색</button>
-                        <p class="sb-addr">
-                        	<input type="text" class="w-xl" placeholder="상세주소" id="shop_address_detail" name="shop_address_detail">
-                        	<span class="alert" name="sa-message" style="display: none;"></span>
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                <!-- 이부분은 db에서 카테고리 속성값 불러와서 로딩하기 -->
-                    <th>업종 카테고리 <em>*</em></th>
-                    <td>
-                        <div class="select-style select-style1">
-                        <select name="category">
-                            <option value="">선택해주세요</option>
-                            <option value="446">버거</option>
-                            <option value="13">분식</option>
-                            <option value="14">중식</option>
-                            <option value="443">찜탕</option>
-                            <option value="4">치킨</option>
-                            <option value="2">한식</option>
-                            <option value="451">샐러드</option>
-                            <option value="452">아시안</option>
-                            <option value="448">회초밥</option>
-                            <option value="453">고기구이</option>
-                            <option value="449">도시락죽</option>
-                            <option value="447">샌드위치</option>
-                            <option value="17">족발보쌈</option>
-                            <option value="1">피자양식</option>
-                            <option value="18">일식돈까스</option>
-                            
-                        </select>
-                        <span class="alert" name="c-message" style="display: none;"></span>
-                        
-                        </div>
-                        <p class="info-txt">야식카테고리는 회사 정책상 영업시간에 따라 노출 되는 카테고리로 단독 설정이 불가합니다.</p>
-                    </td>
-                </tr>
-            </tbody></table>
+        <div class="p1">
+            <img src="/resources/images/shop/img-j2-1.png" alt="주문 중개 상품소개">
 
-            
-            <p class="chk-item">
-                <label>
-                    <input type="checkbox" name="terms"> <strong>개인정보 수집 및 이용에 동의합니다.(필수)</strong>
-                </label>
+            <p class="t1">저기요 앱과 웹에 가게를 노출하고, 저기요를 통해 주문이 들어오면 주문이 발생할 때에만 일정비율의 주문 중개 이용료를 부과하는 상품입니다.
+                <br><br>주문 중개 이용료는 주문 건당 12.5%(부가세 별도) 입니다.
+                <br>월 정액 고정비 상품도 있으니 가게 사정에 맞게 선택하세요.
             </p>
+        </div>
+
+        <div class="p1">
+            <img src="/resources/images/shop/img-j2-4.png" width="760" height="401" alt="익스프레스 상품소개">
+
+            <p class="t1">주문 중개를 포함해 최고의 고객 주문 경험을 위해 AI를 이용, 음식을 따뜻하고 빠르게! 배차 실패 없이 저기요가 자체적으로 제공하는 배달 대행 서비스입니다. 
+                <br><br>주문 중개 이용료와 별도로 주문 건당 배달 대행 이용료 2,900원(부가세 별도)이 부과됩니다.
+                <br>사장님은 배달 대행 서비스 필요성에 따라 저기요 주문 중개 상품 또는 저기요 익스프레스 상품을 선택하시면 됩니다.
+            </p>
+        </div>
+
+        <div class="p2">
+            <img src="/resources/images/shop/img-j2-2.png" alt="우리동네 플러스 상품소개">
+
+            <p class="t1">원하는 지역, 원하는 카테고리에 입찰가를 제시하고 낙찰되면, 한달 동안 최상단에 고정 노출되는 상품입니다. 최고 입찰금액 순으로 1위 부터 3위까지 노출됩니다.</p>
+
+            <strong>비용 : 입찰형 광고이므로 상황에 따라 상이함</strong>
+
+            <img src="/resources/images/shop/img-j2-3.png" alt="우리동네 플러스 장점">
+
             <div class="btn-set1">
-            <!-- 이부분 나중에 수정하기 -->
-                <button type="button" class="btn-type1" name="save_button">입점 신청 완료</button>
+              <a href="https://bizcenter.yogiyo.co.kr" target="bizcenter" class="btn-type1" onclick="ga_event_tracker('JOIN_BIZ', this, event)">우리동네 플러스 자세히 보기</a>
             </div>
         </div>
-        </form>
     </div>
 </div>
 
