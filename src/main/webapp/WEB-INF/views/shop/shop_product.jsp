@@ -14,7 +14,7 @@
     <script src="https://js-agent.newrelic.com/nr-spa-1216.min.js"></script>
     <script async="" src="//www.google-analytics.com/analytics.js"></script>
     
-    <title>저기요 소개</title>
+    <title>입점상품 소개</title>
     <!-- 다음주소를 위한 코드 -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	
