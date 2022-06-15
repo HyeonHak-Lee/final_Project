@@ -5,6 +5,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -40,6 +42,8 @@ public class ShopController {
 	@PostMapping("/login")
 	public String login(Model model, ShopLoginDto loginDto) {
 		// 값을 입력했는지 확인
+		System.out.println("로그인 포스트함수 호출");
+		System.out.println("입력받은값 : "+loginDto);
 		if (loginDto == null) {
 			String msg = "값을입력하세요.";
 			model.addAttribute("msg", msg);
@@ -48,7 +52,7 @@ public class ShopController {
 		// 입력했으면 로그인 체크
 		String msg = shopSvc.loginCheck(loginDto);
 		model.addAttribute("msg", msg);
-		return "shop/shop_login";
+		return "shop/shop_home";
 	}
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
@@ -123,5 +127,20 @@ public class ShopController {
 	@RequestMapping("/info")
 	public String info() {
 		return "shop/shop_info";
+	}
+	// 저기요 소개
+	@RequestMapping("/introduce")
+	public String introduce() {
+		return "shop/shop_introduce";
+	}
+	// 입점상품 소개
+	@RequestMapping("/product")
+	public String product() {
+		return "shop/shop_product";
+	}
+	// 입점 절차
+	@RequestMapping("/process")
+	public String process() {
+		return "shop/shop_process";
 	}
 }
